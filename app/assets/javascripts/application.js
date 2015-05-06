@@ -1,9 +1,6 @@
 var React = require('react'),
-    Foo = require('./foo'),
-    Bar = require('./bar');
+    NestedApp = require('./nested_app');
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  React.render(<Foo/>, document.querySelector('p'));
+  React.render(<NestedApp/>, document.querySelector('#container'));
 });
-
-console.log(Bar());
