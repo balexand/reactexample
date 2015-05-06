@@ -1,0 +1,21 @@
+{
+  "name": "reactexample",
+  "version": "1.0.0",
+  "description": "== README",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "~> 10.1.0",
+    "browserify-incremental": "^3.0.0",
+    "babelify": "^6.0.2"
+  },
+  "devDependencies": {
+    "babelify": "^6.0.2"
+  }
+}
