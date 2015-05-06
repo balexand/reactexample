@@ -1,6 +1,7 @@
 /* jshint esnext: true */
 
-var React = require('react'),
+var Immutable = require('immutable'),
+    React = require('react'),
     StateInput = require('./state_input'),
     Thing = require('./thing');
 
@@ -10,17 +11,15 @@ module.exports = class extends React.Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
     this.handleWordChange = this.handleWordChange.bind(this);
-    this.state = {things: [{}, {}], word: ''};
+    this.state = {things: Immutable.List.of({}, {}), word: ''};
   }
 
   handleAdd() {
-    this.state.things.push({});
-    this.setState({things: this.state.things});
+    this.setState({things: this.state.things.push({})});
   }
 
   handleRemove() {
-    this.state.things.pop();
-    this.setState({things: this.state.things});
+    this.setState({things: this.state.things.pop()});
   }
 
   handleWordChange(word) {
